@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/output.css">
   <title>ePortfolio Wildhaus</title>
 </head>
@@ -14,21 +16,21 @@
         <nav>
             <ul>
                 <li>
-                    <a>Home</a>
-                    <a>Fotos</a>
-                    <a>Video</a>
-                    <a>Logo</a>
+                    <a href="#home">Home</a>
+                    <a href="#photos">Fotos</a>
+                    <a href="#video">Video</a>
+                    <a href="#logo">Logo</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
-            <div class="parallax"></div>
-            <div class="centered-content">
-                <img src="img/logo2.PNG" id="logo"/>
+            <div class="parallax centered-content">            
+                    <img src="img/logo2.PNG" id="homelogo"/>
             </div>
             <div class="light-container centered-content">
+                
                 <h1>Wildhaus</h1>
                 <p>Als Thema meines ePortfolio’s habe ich meinen Heimat- und Wohnort gewählt. Dazu habe ich mich entschieden, weil ich schon mein ganzes Leben dort wohne und mir das Leben dort auch sehr gefällt. Ausserdem gibt es in Wildhaus viele schöne Gebiete, welche für großartige Fotos sehr geeignet sind. ajdhgfjiansdjgfnaf asdfasdfasf asfdasdfasdf dfdsfsfd fdsfs d fsdf sdf sf sdfsdfsf asdfasdfsaf</p>
             </div>
@@ -38,15 +40,29 @@
             <div class="row"></div>
             <div class="row"></div>
         </section>
-        <section id="video">
+        <section id="video" class="light-container centered-content">
+            <h1>Video</h1>
+            <video></video>
+            <p>Videobeschreibung, Videobearbeitung etc................. consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed </p>
         </section>
-        <section id="logo">
+        <section id="logo" class="dark-container" >
+            <div class="flex1">
+                <h1>Logo</h1>
+                <p>Logobeschreibung, Logobearbeitung etc................. consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit.</p>
+            </div>
+            <div class="flex2">
+                <img src="img/logo_light.PNG"/>
+                <img class="bg-gray-50" src="img/logo2.PNG"/>
+            </div>
         </section>
     </main>
     <footer>
-        <section id="imprint">
+        <section id="imprint" class="flex1">
+            <h2>Impressum</h2>
+            <p>Simon Hefti<br/>Untere Riethaldenstr.31<br/>9658 Wildhaus<br/></p>
         </section>
-        <section id="links">
+        <section id="links" class="flex2">
+            <h2>Links</h2>
         </section>
     </footer>
 </body>

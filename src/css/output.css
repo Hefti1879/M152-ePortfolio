@@ -510,6 +510,11 @@ video {
   height: auto;
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
 .table {
   display: table;
 }
@@ -596,11 +601,11 @@ video {
 * {
   margin: 0;
   padding: 0;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 header {
   background: #424242;
-  color:#fff;
   width: 100%;
   height: 80px;
   font-size: 16px;
@@ -632,30 +637,36 @@ nav li {
 nav a {
   display: table-cell;
   margin:0;
-  border-left:1px solid #97827F;
+  border-left:1px solid #000000;
+  border-bottom: 0.5px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 4vw;
+  padding-right: 4vw;
   height: 100%;
+  color:#898989;
+  text-decoration: none;
   vertical-align: middle;
 }
 
-.parallax {
-  background-image: url("../img/photo1_edited.jpg");
-  /* Set a specific height */
-  min-height: 50em;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+nav a:hover {
+  color: white;
 }
 
 .light-container {
-  width: 100%;
   background-color: white;
   color: black;
+}
+
+.dark-container {
+  background-color: #232323;
+  color: white;
+}
+
+.light-container, .dark-container {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .centered-content {
@@ -670,10 +681,27 @@ nav a {
   text-align: center;
 }
 
+.parallax {
+  background-image: url("../img/photo1_edited.jpg");
+  /* Set a specific height */
+  min-height: 50em;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1 {
   font-size: 36px;
-  font-weight: 500;
-  margin: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 #navlogo {
@@ -681,12 +709,39 @@ h1 {
   float: left;
 }
 
-#logo {
+#homelogo {
   width: 30%;
   align-self: center;
-  position: fixed;
+  /*position: fixed;*/
   top: 15%;
   margin: 0;
+}
+
+#logo {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1 60%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.flex2 {
+  flex: 2 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer {
+  background-color: #424242;
+  color: white;
+  display: flex;
+}
+
+footer > section {
+  width: 50%;
+  padding: 20px 0;
 }
 
 @media (min-width: 640px) {
