@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/output.css">
+  <script src="js/index.js"></script>
   <title>ePortfolio Wildhaus</title>
 </head>
     
@@ -14,14 +16,15 @@
     <header>
         <img id="navlogo" src="img/logo_light.PNG"/>
         <nav>
-            <ul>
+            <ul id="topNav" class="hidden sm:block">
                 <li>
-                    <a href="#home">Home</a>
-                    <a href="#photos">Fotos</a>
-                    <a href="#video">Video</a>
-                    <a href="#logo">Logo</a>
+                    <a href="#home" onclick="showSidenav()">Home</a>
+                    <a href="#photos" onclick="showSidenav()">Fotos</a>
+                    <a href="#video" onclick="showSidenav()">Video</a>
+                    <a href="#logo" onclick="showSidenav()">Logo</a>
                 </li>
             </ul>
+            <a class="flex items-center sm:hidden" href="javascript:void(0);" onclick="showSidenav()"><i class="material-icons text-4xl">menu</i></a> 
         </nav>
     </header>
     <main>
@@ -35,14 +38,15 @@
                 <p>Als Thema meines ePortfolio’s habe ich meinen Heimat- und Wohnort gewählt. Dazu habe ich mich entschieden, weil ich schon mein ganzes Leben dort wohne und mir das Leben dort auch sehr gefällt. Ausserdem gibt es in Wildhaus viele schöne Gebiete, welche für großartige Fotos sehr geeignet sind. ajdhgfjiansdjgfnaf asdfasdfasf asfdasdfasdf dfdsfsfd fdsfs d fsdf sdf sf sdfsdfsf asdfasdfsaf</p>
             </div>
         </section>
-        <section id="photos" class="dark-container space-y-6">
+        <a class="anchor" id="photos"></a>
+        <section id="" class="dark-container space-y-6">
             <h1 class="text-center m-0">Fotos</h1>
-            <span class="text-center w-full  block pb-12">Auf Bilder klicken, um zwischen Original und bearbeiteter Version zu wechseln</span>
-            <div class="md:flex">
-                <div class="w-full md:w-1/2 mx-16">
-                    <img class="float-right max-h-96" src="img/photo1_edited.jpg"/>
+            <span class="text-center w-full block pb-12">Auf Bilder klicken, um zwischen Original und bearbeiteter Version zu wechseln</span>
+            <div class="flex flex-col sm:flex-row">
+                <div class="w-full md:w-1/2 mx-8 sm:mx-16">
+                    <img class="sm:float-right max-h-96" src="img/photo1_edited.jpg"/>
                 </div>
-                <div class="w-full md:w-1/2 mx-16 flex items-center">
+                <div class="w-full md:w-1/2 mx-8  sm:mx-16 flex items-center">
                     <p>consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed </p>
                 </div>                
             </div>
@@ -56,19 +60,21 @@
             </div>
             <div class="md:flex">
                 <div class="w-full md:w-1/2 mx-16">
-                    <img class="float-right max-h-96" src="img/photo1_edited.jpg"/>
+                    <img class="sm:float-right max-h-96" src="img/photo1_edited.jpg"/>
                 </div>
                 <div class="w-full md:w-1/2 mx-16 flex items-center">
                     <p>consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed </p>
                 </div>   
             </div>
         </section>
-        <section id="video" class="light-container centered-content">
+        <a class="anchor" id="video"></a>
+        <section class="light-container centered-content">
             <h1>Video</h1>
             <video></video>
             <p>Videobeschreibung, Videobearbeitung etc................. consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed </p>
         </section>
-        <section id="logo" class="dark-container md:flex" >
+        <a class="anchor" id="logo"></a>
+        <section class="dark-container md:flex" >
             <div class="flex1 w-full md:w-3/5">
                 <h1>Logo</h1>
                 <p>Logobeschreibung, Logobearbeitung etc................. consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit.</p>

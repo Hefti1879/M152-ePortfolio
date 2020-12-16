@@ -537,12 +537,21 @@ video {
   display: table;
 }
 
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
 
-.float-right {
-  float: right;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .m-0 {
@@ -661,16 +670,11 @@ video {
 
 header {
   background: #424242;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   font-size: 16px;
   position: fixed;
-}
-
-header span {
-  float:left;
-  padding: 10px 20px;
-  padding-right: 0;
+  border-bottom: 0.5px solid black;
 }
 
 nav {
@@ -678,34 +682,12 @@ nav {
   height: 100%;
 }
 
-nav ul {
-  list-style-type: none;
-  margin:0;
-  height: 100%;
-}
-
-nav li {
-  display: table;
-  height: 100%;
-}
-
 nav a {
-  display: table-cell;
-  margin:0;
-  border-left:1px solid #000000;
-  border-bottom: 0.5px solid black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  vertical-align: middle;
   height: 100%;
   color:#898989;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-nav a:hover {
-  color: white;
+  padding-right: 4vw;
+  padding-left: 4vw;
 }
 
 .light-container {
@@ -792,7 +774,78 @@ footer > section {
   padding: 20px 0;
 }
 
+.anchor {
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  .sideNav a {
+    float: none;
+    display: block;
+    text-align: right;
+    font-size: x-large;
+    padding: 10px;
+    padding-right: 20px;
+  }
+
+  .sideNav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #424242;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  nav ul {
+    list-style-type: none;
+    margin:0;
+    height: 100%;
+  }
+
+  nav li {
+    display: table;
+    height: 100%;
+  }
+
+  nav li a {
+    display: table-cell;
+    margin:0;
+    border-left:1px solid #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
+
+  nav li a:hover {
+    color: white;
+  }
+}
+
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:float-right {
+    float: right;
+  }
+
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
