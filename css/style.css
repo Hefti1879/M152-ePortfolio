@@ -122,6 +122,10 @@ footer > section {
     visibility: hidden;
 }
 
+img {
+    object-fit: contain;
+}
+
 @media screen and (max-width: 640px) {
     .sideNav a {
         float: none;
@@ -138,6 +142,21 @@ footer > section {
         left: 0;
         background-color: #424242;
         width: 100vw;
+    }
+
+    .centered-content > * {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #homelogo {
+        width: 50%;
+        align-self: center;
+        margin: 0;
+    }
+
+    .parallax {
+        min-height: 30em;
     }
 }
 

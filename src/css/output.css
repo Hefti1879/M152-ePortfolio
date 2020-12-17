@@ -545,8 +545,16 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .text-4xl {
@@ -558,9 +566,9 @@ video {
   margin: 0px;
 }
 
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
+.mx-7 {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
 }
 
 .mb-8 {
@@ -569,6 +577,10 @@ video {
 
 .max-h-96 {
   max-height: 24rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .pb-12 {
@@ -780,6 +792,11 @@ footer > section {
   visibility: hidden;
 }
 
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media screen and (max-width: 640px) {
   .sideNav a {
     float: none;
@@ -796,6 +813,21 @@ footer > section {
     left: 0;
     background-color: #424242;
     width: 100vw;
+  }
+
+  .centered-content > * {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #homelogo {
+    width: 50%;
+    align-self: center;
+    margin: 0;
+  }
+
+  .parallax {
+    min-height: 30em;
   }
 }
 
@@ -845,6 +877,14 @@ footer > section {
   .sm\:mx-16 {
     margin-left: 4rem;
     margin-right: 4rem;
+  }
+
+  .sm\:max-w-none {
+    max-width: none;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 }
 
