@@ -727,7 +727,7 @@ nav a {
 }
 
 .parallax {
-  background-image: url("../img/photo1_edited.jpg");
+  background-image: url("../img/parallax.jpg");
   min-height: 50em;
   background-attachment: fixed;
   background-position: center;
@@ -759,14 +759,8 @@ h2 {
   margin: 0;
 }
 
-.flex1 {
+.padding-5x {
   /*flex: 1 60%;*/
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.flex2 {
-  /*flex: 2 40%;*/
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -791,6 +785,12 @@ footer > section {
 img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+iframe {
+  width: 50vw;
+  height: 28.2vw;
+  margin-bottom: 2vw;
 }
 
 @media screen and (max-width: 640px) {
@@ -824,6 +824,11 @@ img {
 
   .parallax {
     min-height: 30em;
+  }
+
+  iframe {
+    width: 80vw;
+    height: 45.18vw;
   }
 }
 
